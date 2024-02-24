@@ -1,0 +1,297 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
+
+h1 {font-size: 3.5em;}
+h2 {font-size: 2.7em;}
+h3 {font-size: 2em;}
+p { font-size: 1em;}
+ul {list-style: none;}
+li{ font-size: 1em;}
+.color-acent{color: blueviolet;}
+
+button{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 7px 30px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 10px 40px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: blueviolet;
+}
+
+button:hover{
+    background-color: darkmagenta;
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+}
+
+header .logo{
+    font-weight: bold;
+    margin: 0px;
+    padding: 25px 30px;
+    color: blueviolet;
+    font-size: 1.45;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px ;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: blueviolet;
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    background-image: linear-gradient(0deg,
+     rgba(0,0,0,0.5),
+     rgba(0,0,0,0.5))
+     ,url("desarrollando.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center center;
+}
+
+#hero button{
+    color: white;
+}
+
+
+
+#somos-mejores .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#programas{
+    background-color: rgb(3, 3, 3);
+    color: white;
+    text-align: center;
+}
+
+#programas .container{
+    padding: 150px 12px;
+}
+
+#programas p{
+    display: none;
+}
+
+#programas h2{
+    margin-top: 0px;
+    font-size: 3.2em;
+}
+
+#programas .carta{
+    background-position: center center;
+        background-size: cover;
+        padding: 50px;
+        margin: 20px;
+        border-radius: 10px;
+}
+
+.carta:first-child{
+    background-image: linear-gradient(0deg,
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)), url("programando.jpg");
+                
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(0deg,
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)), url("aprendiendo.jpg");
+               
+}   
+
+.carta:nth-child(3) {
+    background-image: linear-gradient(0deg,
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)), url("culebra.jpg");
+               
+}
+
+#caracteristicas{
+    padding: 150px 12px;
+    text-align: center;
+}
+
+#caracteristicas li{
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+#Aplica-ya{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(3, 3, 3, 3);
+    color: white;
+    height: 80vh;
+}
+
+#Aplica-ya button{
+    font-size: 5vw;
+}
+
+footer{
+    background-color: rgba(235, 235, 235, 235);
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+footer p{
+    margin: 0px;
+    padding: 12px;
+    color: rgba(100, 100, 100, 100);
+}
+
+@media(min-width: 700px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0px;
+        padding-right: 25px;
+    }
+
+    #hero h1{
+        font-size: 5em;
+        transition: 1s;
+    }
+
+    #somos-mejores .container{
+        justify-content: center;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #somos-mejores .text{
+        width:  50%;
+        text-align: initial;
+        padding-left: 30px;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #somos-mejores .img-container{
+
+        background-image: url("pc.webp");
+        background-size: cover;
+        background-position: center center;
+        width: 400px;
+        height: 400px;
+
+    }
+
+    #programas .cartas{
+        display: flex;
+        justify-content: center;
+    }
+
+    #programas p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #programas h3{
+        margin-top: 0px;
+    }
+
+    #programas .carta{
+        padding: 15px;
+    }
+
+    #caracteristicas{
+        background-image: url("animado.png");
+        background-repeat: no-repeat;
+        background-size: 500px 400px;
+        background-position: calc(100vw - 500px) 20px;
+    }
+
+    #caracteristicas .container{
+        text-align: initial;
+    }
+
+    #caracteristicas ul{
+        margin-left: 100px;
+    }
+
+    #Aplica-ya h2{
+        font-size: 5em;
+    }
+
+    #Aplica-ya button{
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    #caracteristicas{
+        background-position-x: calc(100vw - 700px) ;
+    }
+    
+}
+
+
